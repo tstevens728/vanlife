@@ -14,13 +14,13 @@ export default function App() {
           <Text style={styles.text}>{'Top Routes'}</Text>
         </Pressable>
         <Pressable style={styles.pressable}>
-          <Text style={styles.text}>{'Preperation'}</Text>
-        </Pressable>
-        <Pressable style={styles.pressable}>
-          <Text style={styles.text}>{'Connect'}</Text>
+          <Text style={styles.text}>{'Tips'}</Text>
         </Pressable>
         <Pressable style={styles.pressable}>
           <Text style={styles.text}>{'Forums'}</Text>
+        </Pressable>
+        <Pressable style={styles.pressable}>
+          <Text style={styles.text}>{'Sign In'}</Text>
         </Pressable>
       </View>
     </View>

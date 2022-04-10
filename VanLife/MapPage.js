@@ -1,32 +1,20 @@
 import React from 'react';
 import {StyleSheet, Pressable, Text, View} from 'react-native';
 import Header from './Components/header';
-import MapPage from './MapPage';
 
-export default function App() {
+export default function MapPage() {
   return (
     <View>
       <Header style={styles.header} />
       <View style={styles.container}>
         <Pressable style={styles.pressable}>
-          <Text style={styles.text}>{'Maps'}</Text>
-        </Pressable>
-        <Pressable style={styles.pressable}>
-          <Text style={styles.text}>{'Top Routes'}</Text>
-        </Pressable>
-        <Pressable style={styles.pressable}>
-          <Text style={styles.text}>{'Tips'}</Text>
-        </Pressable>
-        <Pressable style={styles.pressable}>
-          <Text style={styles.text}>{'Forums'}</Text>
-        </Pressable>
-        <Pressable style={styles.pressable}>
-          <Text style={styles.text}>{'Sign In'}</Text>
-        </Pressable>
+          <Text style={styles.text}>{'NewButton'}</Text>
+          </Pressable>
       </View>
     </View>
-  );
+  )
 }
+
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',

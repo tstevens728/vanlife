@@ -6,8 +6,8 @@ import Home from './src/screens/home';
 import Maps from './src/screens/maps';
 
 const AppNavigator = createStackNavigator({
-  MapsScreen: {screen: Maps},
   HomeScreen: {screen: Home},
+  MapsScreen: {screen: Maps},
 });
 
 export default createAppContainer(AppNavigator);

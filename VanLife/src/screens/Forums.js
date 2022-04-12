@@ -10,6 +10,11 @@ import {
 import Header from '../components/header';
 
 export class Forums extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {text: ''};
+  }
+
   render() {
     return (
       <View>
@@ -61,18 +66,22 @@ export class Forums extends Component {
               }
             </Text>
           </Text>
-          <SafeAreaView>
-            <TextInput
-              style={styles.input}
-              onChangeText={React.useState(null)}
-              value={text}
-              placeholder="Enter Comment"
-              keyboardType="numeric"
-            />
-          </SafeAreaView>
-          <Pressable style={styles.pressable}>
-            <Text style={styles.text}>{'Post Comment'}</Text>
-          </Pressable>
+          <TextInput
+            style={{
+              height: 40,
+              width: '80%',
+              backgroundColor: 'azure',
+              padding: 10,
+              fontSize: 20,
+            }}
+            placeholder="Write a post ! "
+            onChangeText={text => this.setState({text})}
+          />
+          <View style={styles.pressableView}>
+            <Pressable style={styles.pressable}>
+              <Text style={styles.text}>{'Post Comment'}</Text>
+            </Pressable>
+          </View>
         </View>
       </View>
     );
@@ -82,16 +91,22 @@ export class Forums extends Component {
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
-    paddingLeft: 65,
+    alignItems: 'flex-start',
+    paddingLeft: 30,
+    paddingTop: 30,
   },
   pressable: {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,
-    padding: 6,
+    padding: 15,
     height: 60,
-    width: '80%',
     backgroundColor: '#696969',
+  },
+  pressableView: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 25,
   },
   text: {
     fontSize: 16,
@@ -99,31 +114,28 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 0.25,
     color: 'white',
+    padding: 2,
   },
   titleText: {
     fontSize: 32,
-    lineHeight: 21,
+    lineHeight: 40,
     fontWeight: 'bold',
     letterSpacing: 0.25,
-    color: 'white',
+    color: '#696969',
+    textDecorationLine: 'underline',
   },
   forumTitle: {
     fontSize: 21,
     lineHeight: 21,
     letterSpacing: 0.25,
-    color: 'white',
+    color: '#696969',
+    fontStyle: 'italic',
   },
   forumText: {
     fontSize: 16,
     lineHeight: 21,
     letterSpacing: 0.25,
-    color: 'white',
-  },
-  input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
+    color: '#696969',
   },
 });
 

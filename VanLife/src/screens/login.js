@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, Button, View} from 'react-native';
+import {StyleSheet, Text, Button, View, ImageBackground} from 'react-native';
 import Header from '../components/header';
 
 export class login extends Component {
@@ -7,13 +7,20 @@ export class login extends Component {
     return (
       <View>
         <Header style={styles.header} />
-        <View style={styles.container}>
-          <Text> Welcome to Vanlife!</Text>
-        </View>
-        <View style={styles.log}>
-          <Button title="Sign Up" />
-          <Button title="Login" />
-        </View>
+        <ImageBackground
+          source={require('../components/signinBackdrop.jpg')}
+          resizeMode="cover"
+          style={styles.ImageBackground}>
+          <View style={styles.container}>
+            <Text style={styles.text}> Welcome to Vanlife!</Text>
+          </View>
+          <View style={styles.log}>
+            <Button title="Sign Up" color="#696969" />
+          </View>
+          <View style={styles.log}>
+            <Button title="Login" color="#696969" />
+          </View>
+        </ImageBackground>
       </View>
     );
   }
@@ -24,16 +31,22 @@ export default login;
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
-    paddingLeft: 130,
-    marginTop: 100,
+    alignItems: 'center',
+    paddingTop: '50%',
   },
-
+  ImageBackground: {
+    height: '100%',
+    width: '100%',
+    position: 'relative',
+    top: 0,
+    left: 0,
+  },
   text: {
-    fontSize: 16,
-    lineHeight: 21,
+    fontSize: 30,
+    lineHeight: 30,
     fontWeight: 'bold',
     letterSpacing: 0.25,
-    color: 'white',
+    color: '#FFE4C4',
   },
   log: {
     justifyContent: 'center',

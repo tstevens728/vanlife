@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, View, Text} from 'react-native';
+import {Button, View, Image} from 'react-native';
 import Header from '../components/header';
 
 export class Maps extends Component {
@@ -7,20 +7,41 @@ export class Maps extends Component {
     return (
       <View>
         <Header />
-
         <View
           style={{
-            alignItems: 'center',
             justifyContent: 'center',
+            alignItems: 'center',
           }}>
-          <Button
-            title="Top Routes"
-            onPress={() => this.props.navigation.navigate('HomeScreen')}
+          <Image
+            source={require('../components/map.jpg')}
+            style={{
+              borderColor: 'black',
+              borderWidth: 3,
+              width: '90%',
+              height: '70%',
+            }}
           />
-          <Button
-            title="Saved Routes"
-            onPress={() => this.props.navigation.navigate('HomeScreen')}
-          />
+          <View
+            style={{
+              padding: 20,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Button
+              title="Top Routes"
+              onPress={() => this.props.navigation.navigate('Home')}
+            />
+          </View>
+          <View
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Button
+              title="Saved Routes"
+              onPress={() => this.props.navigation.navigate('SavedRoutes')}
+            />
+          </View>
         </View>
       </View>
     );

@@ -55,7 +55,7 @@ export class Home extends Component {
             }}>
             <Button
               color="#696969"
-              onPress={() => this.props.navigation.navigate('Maps')}
+              onPress={() => this.props.navigation.navigate('Tips')}
               title="Planning"
             />
           </View>

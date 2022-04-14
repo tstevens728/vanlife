@@ -4,10 +4,11 @@ import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import Home from './src/screens/home';
 import Maps from './src/screens/maps';
-import Forums from './src/screens/forums';
+import Forums from './src/screens/Forums';
 import Login from './src/screens/login';
 import SavedRoutes from './src/screens/savedRoutes';
 import Tips from './src/screens/tips';
+import TopRoutes from './src/screens/topRoutes';
 
 const AppNavigator = createStackNavigator({
   Home: {screen: Home},
@@ -16,6 +17,7 @@ const AppNavigator = createStackNavigator({
   Login: {screen: Login},
   SavedRoutes: {screen: SavedRoutes},
   Tips: {screen: Tips},
+  TopRoutes: {screen: TopRoutes},
 });
 
 export default createAppContainer(AppNavigator);

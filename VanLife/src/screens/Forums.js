@@ -33,7 +33,7 @@ export class Forums extends Component {
             <Text style={styles.forumText}>
               {' '}
               {
-                '1. Boston MA, 2. Nashville TN, 3. Los Angeles CA, 4. Houston TX, 5. Dallas TX, 6. Chicago IL, 7. Miami FL, 8. New York City NY, 9. Seatle WA, 10. Portland OR'
+                '1. Boston MA, 2. Nashville TN, 3. Los Angeles CA, 4. Houston TX, 5. Dallas TX, 6. Chicago IL, 7. Miami FL, 8. New York City NY, 9. Seattle WA, 10. Portland OR'
               }
             </Text>
           </Text>
@@ -62,7 +62,7 @@ export class Forums extends Component {
             <Text style={styles.forumText}>
               {' '}
               {
-                'From User DefaultUser04: Seatle is only 9th? Underrated for sure!'
+                'From User DefaultUser04: Seattle is only 9th? Underrated for sure!'
               }
             </Text>
           </Text>

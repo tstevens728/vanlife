@@ -24,7 +24,7 @@ const DATA = [
   },
   {
     id: '4',
-    title: 'GrandCanyon to Niagra Falls',
+    title: 'Grand Canyon to Niagra Falls',
   },
   {
     id: '5',

@@ -28,8 +28,9 @@ export class Maps extends Component {
               justifyContent: 'center',
             }}>
             <Button
+              color="#696969"
               title="Top Routes"
-              onPress={() => this.props.navigation.navigate('Home')}
+              onPress={() => this.props.navigation.navigate('TopRoutes')}
             />
           </View>
           <View
@@ -38,6 +39,7 @@ export class Maps extends Component {
               justifyContent: 'center',
             }}>
             <Button
+              color="#696969"
               title="Saved Routes"
               onPress={() => this.props.navigation.navigate('SavedRoutes')}
             />
